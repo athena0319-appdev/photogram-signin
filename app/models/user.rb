@@ -13,7 +13,7 @@
 #
 
 class User < ApplicationRecord
-
+  has_many :photos, foreign_key: :owner_id
   validates(:username,
     {
       :presence => true,

@@ -13,6 +13,8 @@
 #
 
 class Photo < ApplicationRecord
+
+  belongs_to :user, foreign_key: :owner_id
   validates(:poster, { :presence => true })
   validates(:image, { :presence => true })
 

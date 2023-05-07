@@ -32,7 +32,11 @@
       </li>
       
       <li> 
-        <%= session.fetch(:user_id)%>
+          <% if session[:user_id] %>
+    <%= session[:user_id] %>
+  <% else %>
+    Not logged in
+  <% end %>
       </li>
     </ul> 
   </nav>
